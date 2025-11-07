@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーパレット | Design Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: -40px auto 80px;
+            padding: 0 20px;
+        }
+
+        .palette-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .palette-header {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .palette-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .palette-description {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 15px;
+            background: white;
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .color-code {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .copy-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .gradient-preview {
+            height: 100px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-link">← デザインリソースに戻る</a>
+        <h1>🎨 カラーパレット</h1>
+        <p>各LPサンプルで使用している配色一覧</p>
+    </div>
+
+    <div class="container">
+        <!-- 01. 音楽フェスティバル -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">01. 音楽フェスティバル</h2>
+                <p class="palette-description">ビビッドでエネルギッシュなグラデーション配色</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#ff006e">
+                    <div class="color-swatch" style="background: #ff006e;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Pink</div>
+                        <div class="color-code">#ff006e</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#8338ec">
+                    <div class="color-swatch" style="background: #8338ec;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Electric Purple</div>
+                        <div class="color-code">#8338ec</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#3a86ff">
+                    <div class="color-swatch" style="background: #3a86ff;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Vibrant Blue</div>
+                        <div class="color-code">#3a86ff</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#000000">
+                    <div class="color-swatch" style="background: #000000;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Black</div>
+                        <div class="color-code">#000000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02. テック製品 -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">02. テック製品ローンチ</h2>
+                <p class="palette-description">モダンでミニマルなモノトーン配色</p>
+            </div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#000000">
+                    <div class="color-swatch" style="background: #000000;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Pure Black</div>
+                        <div class="color-code">#000000</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#333333">
+                    <div class="color-swatch" style="background: #333333;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Gray</div>
+                        <div class="color-code">#333333</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#666666">
+                    <div class="color-swatch" style="background: #666666;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Medium Gray</div>
+                        <div class="color-code">#666666</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#f9f9f9">
+                    <div class="color-swatch" style="background: #f9f9f9; border: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-code">#f9f9f9</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#ffffff">
+                    <div class="color-swatch" style="background: #ffffff; border: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-code">#ffffff</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03. オンラインセミナー -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">03. オンラインセミナー</h2>
+                <p class="palette-description">プロフェッショナルで信頼感のあるブルー系配色</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#2563eb">
+                    <div class="color-swatch" style="background: #2563eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Blue</div>
+                        <div class="color-code">#2563eb</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#1d4ed8">
+                    <div class="color-swatch" style="background: #1d4ed8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Blue</div>
+                        <div class="color-code">#1d4ed8</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#dbeafe">
+                    <div class="color-swatch" style="background: #dbeafe;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Blue</div>
+                        <div class="color-code">#dbeafe</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#1e293b">
+                    <div class="color-swatch" style="background: #1e293b;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Dark</div>
+                        <div class="color-code">#1e293b</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04. レストラン -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">04. レストランキャンペーン</h2>
+                <p class="palette-description">食欲をそそる温かみのあるアースカラー</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#d2691e">
+                    <div class="color-swatch" style="background: #d2691e;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Chocolate Orange</div>
+                        <div class="color-code">#d2691e</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#8b4513">
+                    <div class="color-swatch" style="background: #8b4513;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Saddle Brown</div>
+                        <div class="color-code">#8b4513</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#f5deb3">
+                    <div class="color-swatch" style="background: #f5deb3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Wheat</div>
+                        <div class="color-code">#f5deb3</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#5d4037">
+                    <div class="color-swatch" style="background: #5d4037;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Brown Dark</div>
+                        <div class="color-code">#5d4037</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#fafaf8">
+                    <div class="color-swatch" style="background: #fafaf8; border: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Cream White</div>
+                        <div class="color-code">#fafaf8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 05. 企業採用 -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">05. 企業採用</h2>
+                <p class="palette-description">誠実で親しみやすいブルー系配色</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#3b82f6">
+                    <div class="color-swatch" style="background: #3b82f6;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Blue</div>
+                        <div class="color-code">#3b82f6</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#2563eb">
+                    <div class="color-swatch" style="background: #2563eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Dark</div>
+                        <div class="color-code">#2563eb</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#dbeafe">
+                    <div class="color-swatch" style="background: #dbeafe;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Light</div>
+                        <div class="color-code">#dbeafe</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#1e293b">
+                    <div class="color-swatch" style="background: #1e293b;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate</div>
+                        <div class="color-code">#1e293b</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 06. 子供向けイベント -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">06. 子供向けイベント</h2>
+                <p class="palette-description">カラフルで楽しいレインボーカラー</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #ff7675 100%);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#ff6b9d">
+                    <div class="color-swatch" style="background: #ff6b9d;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Hot Pink</div>
+                        <div class="color-code">#ff6b9d</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#feca57">
+                    <div class="color-swatch" style="background: #feca57;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Sunny Yellow</div>
+                        <div class="color-code">#feca57</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#48dbfb">
+                    <div class="color-swatch" style="background: #48dbfb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Sky Blue</div>
+                        <div class="color-code">#48dbfb</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#1dd1a1">
+                    <div class="color-swatch" style="background: #1dd1a1;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mint Green</div>
+                        <div class="color-code">#1dd1a1</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#ffeaa7">
+                    <div class="color-swatch" style="background: #ffeaa7;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Yellow</div>
+                        <div class="color-code">#ffeaa7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 07. 婚活イベント -->
+        <div class="palette-section">
+            <div class="palette-header">
+                <h2 class="palette-title">07. 婚活イベント</h2>
+                <p class="palette-description">上品で温かみのあるローズピンク配色</p>
+            </div>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #d4838b, #e9b4bc);"></div>
+            <div class="color-grid">
+                <div class="color-card" data-color="#d4838b">
+                    <div class="color-swatch" style="background: #d4838b;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Rose Pink</div>
+                        <div class="color-code">#d4838b</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#e9b4bc">
+                    <div class="color-swatch" style="background: #e9b4bc;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Rose</div>
+                        <div class="color-code">#e9b4bc</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#fef5f6">
+                    <div class="color-swatch" style="background: #fef5f6; border: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blush White</div>
+                        <div class="color-code">#fef5f6</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#fdfbf9">
+                    <div class="color-swatch" style="background: #fdfbf9; border: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warm White</div>
+                        <div class="color-code">#fdfbf9</div>
+                    </div>
+                </div>
+                <div class="color-card" data-color="#333333">
+                    <div class="color-swatch" style="background: #333333;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Charcoal</div>
+                        <div class="color-code">#333333</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-notification" id="notification">
+        カラーコードをコピーしました！
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 LP Sample Collection. All rights reserved.</p>
+    </div>
+
+    <script>
+        // カラーコードをクリックでコピー
+        document.querySelectorAll('.color-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const color = this.getAttribute('data-color');
+
+                // クリップボードにコピー
+                navigator.clipboard.writeText(color).then(() => {
+                    // 通知を表示
+                    const notification = document.getElementById('notification');
+                    notification.style.display = 'block';
+
+                    // 2秒後に非表示
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

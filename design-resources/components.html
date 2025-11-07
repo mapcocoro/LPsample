@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンポーネント | Design Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: -40px auto 80px;
+            padding: 0 20px;
+        }
+
+        .component-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-description {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .component-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* ボタンスタイル */
+        .btn-music {
+            padding: 20px 50px;
+            background: #fff;
+            color: #ff006e;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 900;
+            border-radius: 50px;
+            display: inline-block;
+            border: 4px solid #ff006e;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn-music:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-tech {
+            padding: 16px 40px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-tech:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .btn-seminar {
+            padding: 18px 50px;
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-seminar:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-restaurant {
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #d2691e, #8b4513);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-restaurant:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-recruit {
+            padding: 18px;
+            background: #3b82f6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-recruit:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-kids {
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #ff6b9d, #feca57);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: 900;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn-kids:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .btn-matchmaking {
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #d4838b, #e9b4bc);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(212, 131, 139, 0.3);
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-matchmaking:hover {
+            transform: translateY(-3px);
+        }
+
+        /* カードスタイル */
+        .card-music {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid #ff006e;
+            transition: all 0.3s;
+        }
+
+        .card-music:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-tech {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .card-tech:hover {
+            border-color: #000;
+        }
+
+        .card-seminar {
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-restaurant {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            border-left: 4px solid #d2691e;
+        }
+
+        .card-recruit {
+            background: #f9fafb;
+            padding: 35px 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card-kids {
+            background: linear-gradient(135deg, #ffeaa7, #fff9e6);
+            padding: 40px 30px;
+            border-radius: 25px;
+            text-align: center;
+            border: 4px solid #feca57;
+            transition: all 0.3s;
+        }
+
+        .card-kids:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .card-matchmaking {
+            background: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* フォームスタイル */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-link">← デザインリソースに戻る</a>
+        <h1>🧩 コンポーネント</h1>
+        <p>再利用可能なUIコンポーネント一覧</p>
+    </div>
+
+    <div class="container">
+        <!-- ボタン -->
+        <div class="component-section">
+            <div class="section-header">
+                <h2 class="section-title">ボタン</h2>
+                <p class="section-description">各LPで使用しているボタンスタイル</p>
+            </div>
+            <div class="component-grid">
+                <div>
+                    <div class="component-label">01. 音楽フェスティバル</div>
+                    <a href="#" class="btn-music">チケット購入</a>
+                </div>
+                <div>
+                    <div class="component-label">02. テック製品</div>
+                    <a href="#" class="btn-tech">今すぐ購入</a>
+                </div>
+                <div>
+                    <div class="component-label">03. オンラインセミナー</div>
+                    <a href="#" class="btn-seminar">今すぐ申し込む</a>
+                </div>
+                <div>
+                    <div class="component-label">04. レストラン</div>
+                    <a href="#" class="btn-restaurant">予約する</a>
+                </div>
+                <div>
+                    <div class="component-label">05. 企業採用</div>
+                    <a href="#" class="btn-recruit">エントリーする</a>
+                </div>
+                <div>
+                    <div class="component-label">06. 子供向けイベント</div>
+                    <a href="#" class="btn-kids">チケットをゲット！</a>
+                </div>
+                <div>
+                    <div class="component-label">07. 婚活イベント</div>
+                    <a href="#" class="btn-matchmaking">参加する</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- カード -->
+        <div class="component-section">
+            <div class="section-header">
+                <h2 class="section-title">カード</h2>
+                <p class="section-description">情報表示用のカードコンポーネント</p>
+            </div>
+            <div class="component-grid">
+                <div class="card-music">
+                    <div class="card-title" style="color: #fff; font-size: 28px;">THE ROCKERS</div>
+                    <div class="card-text" style="color: #ccc;">HEADLINER</div>
+                </div>
+                <div class="card-tech">
+                    <div class="card-title">アクティブノイズキャンセリング</div>
+                    <div class="card-text">外部ノイズを最大95%カット</div>
+                </div>
+                <div class="card-seminar">
+                    <div class="card-title">デジタルマーケティング概論</div>
+                    <div class="card-text">マーケティングの全体像と最新トレンド</div>
+                </div>
+                <div class="card-restaurant">
+                    <div class="card-title" style="color: #d2691e;">厳選素材</div>
+                    <div class="card-text">契約農家から直送される新鮮な野菜</div>
+                </div>
+                <div class="card-recruit">
+                    <div class="card-title">フラットな組織</div>
+                    <div class="card-text">年齢や役職に関係なく、誰でも意見を言える環境</div>
+                </div>
+                <div class="card-kids">
+                    <div class="card-title" style="color: #ff6b9d; font-size: 24px;">たのしいゲーム</div>
+                    <div class="card-text">わなげ、ヨーヨーつり、スーパーボールすくい</div>
+                </div>
+                <div class="card-matchmaking">
+                    <div class="card-title">上質な空間と雰囲気</div>
+                    <div class="card-text">一流ホテルの個室を貸し切り</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- フォーム -->
+        <div class="component-section">
+            <div class="section-header">
+                <h2 class="section-title">フォーム要素</h2>
+                <p class="section-description">入力フォームのスタイル（共通デザイン）</p>
+            </div>
+            <div style="max-width: 600px;">
+                <div class="form-group">
+                    <label class="form-label">お名前 *</label>
+                    <input type="text" class="form-input" placeholder="山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">メールアドレス *</label>
+                    <input type="email" class="form-input" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">メッセージ</label>
+                    <textarea class="form-input" rows="4" placeholder="ご質問やご要望がありましたらご記入ください"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- アイコン＆バッジ -->
+        <div class="component-section">
+            <div class="section-header">
+                <h2 class="section-title">バッジ & ラベル</h2>
+                <p class="section-description">情報を強調するためのバッジ</p>
+            </div>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+                <span style="background: #ff006e; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 14px;">人気</span>
+                <span style="background: #2563eb; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 14px;">オンライン開催</span>
+                <span style="background: #d2691e; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 14px;">期間限定</span>
+                <span style="background: linear-gradient(135deg, #ff6b9d, #feca57); color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 14px;">おすすめ！</span>
+                <span style="background: #d4838b; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 14px;">募集中</span>
+            </div>
+        </div>
+
+        <!-- グラデーション -->
+        <div class="component-section">
+            <div class="section-header">
+                <h2 class="section-title">グラデーション</h2>
+                <p class="section-description">各LPで使用されているグラデーション効果</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+                <div style="height: 100px; background: linear-gradient(135deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%); border-radius: 12px;"></div>
+                <div style="height: 100px; background: linear-gradient(135deg, #000, #333); border-radius: 12px;"></div>
+                <div style="height: 100px; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius: 12px; border: 1px solid #ddd;"></div>
+                <div style="height: 100px; background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%); border-radius: 12px;"></div>
+                <div style="height: 100px; background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #ff7675 100%); border-radius: 12px;"></div>
+                <div style="height: 100px; background: linear-gradient(135deg, #d4838b, #e9b4bc); border-radius: 12px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 LP Sample Collection. All rights reserved.</p>
+    </div>
+</body>
+</html>

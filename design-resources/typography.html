@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイポグラフィ | Design Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 80px;
+            padding: 0 20px;
+        }
+
+        .typo-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-description {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .font-stack {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .typo-grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        .typo-item {
+            padding: 30px;
+            background: #fafafa;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+        }
+
+        .typo-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .typo-specs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
+
+        .typo-sample {
+            margin-top: 20px;
+        }
+
+        /* LP別のフォントスタイル */
+        .music-h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.2;
+            color: #333;
+        }
+
+        .music-h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #333;
+        }
+
+        .music-body {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .tech-h1 {
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #000;
+        }
+
+        .tech-h2 {
+            font-size: 48px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .tech-body {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .seminar-h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: #1e293b;
+        }
+
+        .seminar-h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .seminar-body {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.9;
+        }
+
+        .restaurant-h1 {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #5d4037;
+        }
+
+        .restaurant-h2 {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #5d4037;
+        }
+
+        .restaurant-body {
+            font-size: 16px;
+            color: #6d4c41;
+            line-height: 1.9;
+        }
+
+        .recruit-h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1e293b;
+        }
+
+        .recruit-h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .recruit-body {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .kids-h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.2;
+            color: #333;
+        }
+
+        .kids-h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #ff6b9d;
+        }
+
+        .kids-body {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .matchmaking-h1 {
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1.3;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        .matchmaking-h2 {
+            font-size: 42px;
+            font-weight: 300;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        .matchmaking-body {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .music-h1, .tech-h1, .restaurant-h1, .kids-h1, .matchmaking-h1 {
+                font-size: 36px;
+            }
+            .seminar-h1, .recruit-h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-link">← デザインリソースに戻る</a>
+        <h1>🔤 タイポグラフィ</h1>
+        <p>フォントスタイルガイド</p>
+    </div>
+
+    <div class="container">
+        <!-- 01. 音楽フェスティバル -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">01. 音楽フェスティバル</h2>
+                <p class="section-description">エネルギッシュで力強い印象を与える太字フォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: 'Arial', 'Helvetica', sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 72px</span>
+                        <span class="spec-item">Weight: 900</span>
+                        <span class="spec-item">Line Height: 1.2</span>
+                    </div>
+                    <div class="typo-sample music-h1">SUMMER SONIC WAVE</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 48px</span>
+                        <span class="spec-item">Weight: 900</span>
+                    </div>
+                    <div class="typo-sample music-h2">LINE UP</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 16px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.7</span>
+                    </div>
+                    <div class="typo-sample music-body">
+                        楽しいゲーム、おいしい食べ物、ステキなショー！家族みんなで楽しめる2日間のイベントです。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02. テック製品 -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">02. テック製品ローンチ</h2>
+                <p class="section-description">モダンでミニマルなサンセリフフォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 72px</span>
+                        <span class="spec-item">Weight: 700</span>
+                        <span class="spec-item">Letter Spacing: -2px</span>
+                    </div>
+                    <div class="typo-sample tech-h1">AirPod Pro Max</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 48px</span>
+                        <span class="spec-item">Weight: 600</span>
+                    </div>
+                    <div class="typo-sample tech-h2">Experience the difference</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 16px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.8</span>
+                    </div>
+                    <div class="typo-sample tech-body">
+                        革新的なノイズキャンセリング技術と、比類なき音質があなたの世界を変える。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03. オンラインセミナー -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">03. オンラインセミナー</h2>
+                <p class="section-description">プロフェッショナルで読みやすいフォント設定</p>
+            </div>
+            <div class="font-stack">
+                font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 52px</span>
+                        <span class="spec-item">Weight: 800</span>
+                        <span class="spec-item">Line Height: 1.3</span>
+                    </div>
+                    <div class="typo-sample seminar-h1">2日間で学ぶデジタルマーケティング実践講座</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 40px</span>
+                        <span class="spec-item">Weight: 700</span>
+                    </div>
+                    <div class="typo-sample seminar-h2">カリキュラム</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 16px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.9</span>
+                    </div>
+                    <div class="typo-sample seminar-body">
+                        SEO、SNS、広告運用まで。現場で使える実践的なスキルを業界トップクラスの講師陣が徹底指導します。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04. レストラン -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">04. レストランキャンペーン</h2>
+                <p class="section-description">エレガントで洗練された細字フォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: 'Helvetica Neue', Arial, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 72px</span>
+                        <span class="spec-item">Weight: 300</span>
+                        <span class="spec-item">Letter Spacing: 3px</span>
+                    </div>
+                    <div class="typo-sample restaurant-h1">秋の収穫祭</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 42px</span>
+                        <span class="spec-item">Weight: 300</span>
+                        <span class="spec-item">Letter Spacing: 2px</span>
+                    </div>
+                    <div class="typo-sample restaurant-h2">私たちのこだわり</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 16px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.9</span>
+                    </div>
+                    <div class="typo-sample restaurant-body">
+                        秋の訪れとともに、厳選した旬の食材をふんだんに使用したスペシャルコースをご用意いたしました。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 05. 企業採用 -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">05. 企業採用</h2>
+                <p class="section-description">親しみやすく信頼感のあるフォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 56px</span>
+                        <span class="spec-item">Weight: 700</span>
+                        <span class="spec-item">Line Height: 1.3</span>
+                    </div>
+                    <div class="typo-sample recruit-h1">あなたの「挑戦」が、未来を変える。</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 42px</span>
+                        <span class="spec-item">Weight: 700</span>
+                    </div>
+                    <div class="typo-sample recruit-h2">TechVisionの文化</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 16px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.7</span>
+                    </div>
+                    <div class="typo-sample recruit-body">
+                        TechVisionは、テクノロジーの力で社会課題を解決するスタートアップです。共に成長し、共に未来を創る仲間を募集しています。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 06. 子供向けイベント -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">06. 子供向けイベント</h2>
+                <p class="section-description">大きく読みやすい太字フォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', YuGothic, Meiryo, sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 72px</span>
+                        <span class="spec-item">Weight: 900</span>
+                        <span class="spec-item">Line Height: 1.2</span>
+                    </div>
+                    <div class="typo-sample kids-h1">キッズサマーフェスティバル</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 48px</span>
+                        <span class="spec-item">Weight: 900</span>
+                    </div>
+                    <div class="typo-sample kids-h2">どんなイベント？</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 18px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.8</span>
+                    </div>
+                    <div class="typo-sample kids-body">
+                        楽しいゲーム、おいしい食べ物、ステキなショー！家族みんなで楽しめる2日間のイベントです。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 07. 婚活イベント -->
+        <div class="typo-section">
+            <div class="section-header">
+                <h2 class="section-title">07. 婚活イベント</h2>
+                <p class="section-description">エレガントで上品な細字フォント</p>
+            </div>
+            <div class="font-stack">
+                font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', YuGothic, Meiryo, sans-serif
+            </div>
+            <div class="typo-grid">
+                <div class="typo-item">
+                    <div class="typo-label">Heading 1 (H1)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 56px</span>
+                        <span class="spec-item">Weight: 300</span>
+                        <span class="spec-item">Letter Spacing: 2px</span>
+                    </div>
+                    <div class="typo-sample matchmaking-h1">運命の出会いが、ここから始まる。</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Heading 2 (H2)</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 42px</span>
+                        <span class="spec-item">Weight: 300</span>
+                        <span class="spec-item">Letter Spacing: 2px</span>
+                    </div>
+                    <div class="typo-sample matchmaking-h2">次回開催パーティー</div>
+                </div>
+                <div class="typo-item">
+                    <div class="typo-label">Body Text</div>
+                    <div class="typo-specs">
+                        <span class="spec-item">Size: 18px</span>
+                        <span class="spec-item">Weight: 400</span>
+                        <span class="spec-item">Line Height: 1.9</span>
+                    </div>
+                    <div class="typo-sample matchmaking-body">
+                        落ち着いた雰囲気の中で、質の高い出会いを提供する30代・40代向けプレミアム婚活パーティー。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 LP Sample Collection. All rights reserved.</p>
+    </div>
+</body>
+</html>

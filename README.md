@@ -122,6 +122,11 @@ LP（ランディングページ）作成の受注用に、様々なイベント
 ```
 LPsample/
 ├── README.md
+├── design-resources/          # デザインリソース（クライアント提案用）
+│   ├── index.html            # リソース一覧ページ
+│   ├── color-palette.html    # カラーパレット
+│   ├── typography.html       # タイポグラフィ
+│   └── components.html       # UIコンポーネント
 ├── 01_music_festival/
 │   ├── index.html
 │   ├── style.css
@@ -152,6 +157,33 @@ LPsample/
     └── script.js
 ```
 
+## デザインリソース 🎨
+
+クライアント提案用のデザインリソースを `design-resources/` フォルダに用意しています。
+
+### アクセス方法
+
+```bash
+open design-resources/index.html
+```
+
+### 含まれる内容
+
+1. **カラーパレット** (`color-palette.html`)
+   - 各LPで使用している配色一覧
+   - カラーコードをクリックでコピー可能
+   - グラデーション表示
+
+2. **タイポグラフィ** (`typography.html`)
+   - フォントスタイルガイド
+   - 見出し、本文のサイズと重さの設定
+   - 実際のサンプルテキスト表示
+
+3. **コンポーネント** (`components.html`)
+   - ボタン、カード、フォームなどのUI要素
+   - 各LPのスタイル別に表示
+   - バッジ、グラデーションサンプル
+
 ## 使い方
 
 各ディレクトリの `index.html` をブラウザで開くだけで、そのままLPとして閲覧できます。
@@ -159,6 +191,9 @@ LPsample/
 ```bash
 # 例: 音楽フェスティバルLPを開く
 open 01_music_festival/index.html
+
+# デザインリソースを開く
+open design-resources/index.html
 ```
 
 ## 共通機能
