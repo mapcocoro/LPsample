@@ -13,91 +13,114 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #148eab 0%, #2b96b3 100%);
+            background: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .header {
-            text-align: center;
-            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #148eab 0%, #2b96b3 100%);
             color: white;
+            padding: 30px 20px;
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .header p {
-            font-size: 18px;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 14px;
+            opacity: 0.9;
         }
 
         .container {
             max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-            flex: 1;
+            margin: -20px auto 40px;
+            padding: 0 15px;
+        }
+
+        .nav-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .nav-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #148eab;
+        }
+
+        .nav-card-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .nav-card h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #148eab;
+        }
+
+        .nav-card p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 13px;
         }
 
         .section {
             background: white;
-            border-radius: 15px;
-            padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .section h2 {
-            font-size: 28px;
-            margin-bottom: 25px;
-            color: #148eab;
-            border-bottom: 3px solid #148eab;
-            padding-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-description {
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .lp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .lp-card {
+            border-radius: 10px;
             padding: 25px;
-            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #148eab;
+            border-bottom: 2px solid #148eab;
+            padding-bottom: 10px;
+        }
+
+        .lp-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .lp-link {
+            padding: 18px 20px;
+            border-radius: 10px;
             text-decoration: none;
             color: white;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: none;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
-            min-height: 120px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
-        .lp-card::before {
+        .lp-link::before {
             content: '';
             position: absolute;
             top: 0;
@@ -109,139 +132,82 @@
             transition: opacity 0.3s;
         }
 
-        .lp-card:hover::before {
+        .lp-link:hover::before {
             opacity: 1;
         }
 
-        .lp-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        .lp-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         }
 
-        .lp-card-number {
-            font-size: 13px;
-            opacity: 0.8;
-            margin-bottom: 5px;
-        }
-
-        .lp-card-title {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .lp-card:nth-child(1) {
+        .lp-link:nth-child(1) {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
-        .lp-card:nth-child(2) {
+        .lp-link:nth-child(2) {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
 
-        .lp-card:nth-child(3) {
+        .lp-link:nth-child(3) {
             background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
 
-        .lp-card:nth-child(4) {
+        .lp-link:nth-child(4) {
             background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }
 
-        .lp-card:nth-child(5) {
+        .lp-link:nth-child(5) {
             background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
         }
 
-        .lp-card:nth-child(6) {
+        .lp-link:nth-child(6) {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             color: #333;
         }
 
-        .lp-card:nth-child(7) {
+        .lp-link:nth-child(7) {
             background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             color: #333;
         }
 
-        .resource-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .resource-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            padding: 25px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .resource-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border-color: #148eab;
-            background: white;
-        }
-
-        .resource-card-icon {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
-
-        .resource-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #148eab;
-        }
-
-        .resource-card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
         .footer {
             text-align: center;
-            padding: 30px 20px;
-            color: white;
-            font-size: 14px;
-            opacity: 0.9;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
         }
 
         @media (max-width: 768px) {
+            .header {
+                padding: 20px 15px;
+            }
+
             .header h1 {
-                font-size: 32px;
+                font-size: 24px;
             }
 
-            .header p {
+            .nav-cards {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .nav-card {
+                padding: 15px;
+            }
+
+            .nav-card h2 {
                 font-size: 16px;
             }
 
-            .section {
-                padding: 25px 20px;
-            }
-
-            .section h2 {
-                font-size: 22px;
-            }
-
-            .lp-grid {
+            .lp-links {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 12px;
             }
 
-            .resource-links {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .lp-card {
-                min-height: 100px;
-                padding: 20px;
-            }
-
-            .lp-card-title {
-                font-size: 16px;
+            .lp-link {
+                font-size: 13px;
+                padding: 15px;
             }
         }
     </style>
@@ -255,75 +221,53 @@
     <div class="container">
         <!-- LPサンプル一覧 -->
         <div class="section">
-            <h2>📂 LPサンプル一覧</h2>
-            <p class="section-description">
-                それぞれ全く異なるデザインパターンとターゲット層を想定し、HTML/CSS/JavaScriptで実装した静的サイトです。
-            </p>
-            <div class="lp-grid">
-                <a href="01_music_festival/index.html" class="lp-card">
-                    <div class="lp-card-number">01</div>
-                    <div class="lp-card-title">音楽フェスティバル</div>
-                </a>
-                <a href="02_tech_product/index.html" class="lp-card">
-                    <div class="lp-card-number">02</div>
-                    <div class="lp-card-title">テック製品ローンチ</div>
-                </a>
-                <a href="03_online_seminar/index.html" class="lp-card">
-                    <div class="lp-card-number">03</div>
-                    <div class="lp-card-title">オンラインセミナー</div>
-                </a>
-                <a href="04_restaurant_campaign/index.html" class="lp-card">
-                    <div class="lp-card-number">04</div>
-                    <div class="lp-card-title">レストランキャンペーン</div>
-                </a>
-                <a href="05_recruit/index.html" class="lp-card">
-                    <div class="lp-card-number">05</div>
-                    <div class="lp-card-title">企業採用</div>
-                </a>
-                <a href="06_kids_event/index.html" class="lp-card">
-                    <div class="lp-card-number">06</div>
-                    <div class="lp-card-title">子供向けイベント</div>
-                </a>
-                <a href="07_matchmaking_event/index.html" class="lp-card">
-                    <div class="lp-card-number">07</div>
-                    <div class="lp-card-title">婚活イベント</div>
-                </a>
+            <h3>📂 LPサンプル一覧</h3>
+            <div class="lp-links">
+                <a href="01_music_festival/index.html" class="lp-link">01. 音楽フェスティバル</a>
+                <a href="02_tech_product/index.html" class="lp-link">02. テック製品ローンチ</a>
+                <a href="03_online_seminar/index.html" class="lp-link">03. オンラインセミナー</a>
+                <a href="04_restaurant_campaign/index.html" class="lp-link">04. レストランキャンペーン</a>
+                <a href="05_recruit/index.html" class="lp-link">05. 企業採用</a>
+                <a href="06_kids_event/index.html" class="lp-link">06. 子供向けイベント</a>
+                <a href="07_matchmaking_event/index.html" class="lp-link">07. 婚活イベント</a>
             </div>
         </div>
 
         <!-- デザインリソース -->
-        <div class="section">
-            <h2>🎨 デザインリソース</h2>
-            <p class="section-description">
-                各LPで使用している配色、フォント、コンポーネントを確認できます。また、汎用的なカラーパレットとフォント集も用意しています。
-            </p>
-            <div class="resource-links">
-                <a href="design-resources/color-palette.html" class="resource-card">
-                    <div class="resource-card-icon">🎨</div>
-                    <h3>カラーパレット</h3>
-                    <p>各LPで使用している配色を確認できます</p>
-                </a>
-                <a href="design-resources/typography.html" class="resource-card">
-                    <div class="resource-card-icon">🔤</div>
-                    <h3>タイポグラフィ</h3>
-                    <p>見出し、本文、ボタンなどのフォント設定一覧</p>
-                </a>
-                <a href="design-resources/components.html" class="resource-card">
-                    <div class="resource-card-icon">🧩</div>
-                    <h3>コンポーネント</h3>
-                    <p>再利用可能なUIコンポーネント集</p>
-                </a>
-                <a href="design-resources/general-colors.html" class="resource-card">
-                    <div class="resource-card-icon">🌈</div>
-                    <h3>一般カラーチャート</h3>
-                    <p>汎用的なカラーパレット（7色系統 + シーン別）</p>
-                </a>
-                <a href="design-resources/general-fonts.html" class="resource-card">
-                    <div class="resource-card-icon">✍️</div>
-                    <h3>一般フォント一覧</h3>
-                    <p>日本語・英語の人気フォント集とペアリング提案</p>
-                </a>
-            </div>
+        <div class="section" style="margin-top: 30px;">
+            <h3>🎨 デザインリソース</h3>
+        </div>
+
+        <div class="nav-cards">
+            <a href="design-resources/color-palette.html" class="nav-card">
+                <div class="nav-card-icon">🎨</div>
+                <h2>カラーパレット</h2>
+                <p>各LPで使用している配色を確認できます。ブランドイメージに合わせた色の組み合わせを提案します。</p>
+            </a>
+
+            <a href="design-resources/typography.html" class="nav-card">
+                <div class="nav-card-icon">🔤</div>
+                <h2>タイポグラフィ</h2>
+                <p>フォントスタイルガイド。見出し、本文、ボタンなど、用途別のフォント設定を一覧できます。</p>
+            </a>
+
+            <a href="design-resources/components.html" class="nav-card">
+                <div class="nav-card-icon">🧩</div>
+                <h2>コンポーネント</h2>
+                <p>ボタン、カード、フォームなど、再利用可能なUIコンポーネントのサンプル集です。</p>
+            </a>
+
+            <a href="design-resources/general-colors.html" class="nav-card">
+                <div class="nav-card-icon">🌈</div>
+                <h2>一般カラーチャート</h2>
+                <p>LP制作に使える汎用的なカラーパレット。Blue、Red、Green、Yellow、Purple、Orange、Grayの7色系統を用意しています。</p>
+            </a>
+
+            <a href="design-resources/general-fonts.html" class="nav-card">
+                <div class="nav-card-icon">✍️</div>
+                <h2>一般フォント一覧</h2>
+                <p>日本語・英語の人気フォント集。Sans-serif、Serif、Display、Monospaceなど、様々なフォントとペアリング提案を掲載しています。</p>
+            </a>
         </div>
     </div>
 
