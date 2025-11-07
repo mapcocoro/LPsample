@@ -242,12 +242,14 @@
 
         .combination-colors {
             display: flex;
+            flex-wrap: wrap;
             gap: 6px;
             margin-bottom: 10px;
         }
 
         .combination-color {
-            flex: 1;
+            flex: 1 1 calc(20% - 5px);
+            min-width: 45px;
             height: 50px;
             border-radius: 6px;
             cursor: pointer;
@@ -833,6 +835,442 @@
                 <span class="usage-tag">テキスト</span>
                 <span class="usage-tag">ボーダー</span>
                 <span class="usage-tag">ミニマルデザイン</span>
+            </div>
+        </div>
+
+        <!-- シーン別カラーパレット見出し -->
+        <div class="color-family-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 20px; margin-top: 30px;">
+            <h2 style="color: white; font-size: 24px; margin-bottom: 8px;">🎨 シーン別カラーパレット</h2>
+            <p style="opacity: 0.95; font-size: 13px;">用途やイメージに合わせた配色コレクション</p>
+        </div>
+
+        <!-- アースカラー -->
+        <div class="color-family-section">
+            <div class="family-header">
+                <div class="family-icon" style="background: linear-gradient(135deg, #8b7355, #a0826d);">
+                    🌿
+                </div>
+                <div class="family-info">
+                    <h2>アースカラー</h2>
+                    <p>自然で温かみのある落ち着いた色調 - オーガニック・ナチュラル系に最適</p>
+                </div>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch-card" data-color="#8b7355">
+                    <div class="swatch-color" style="background: #8b7355;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Brown</div>
+                        <div class="swatch-code">#8b7355</div>
+                        <div class="swatch-rgb">rgb(139, 115, 85)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#a0826d">
+                    <div class="swatch-color" style="background: #a0826d;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Clay</div>
+                        <div class="swatch-code">#a0826d</div>
+                        <div class="swatch-rgb">rgb(160, 130, 109)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#c19a6b">
+                    <div class="swatch-color" style="background: #c19a6b;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Sand</div>
+                        <div class="swatch-code">#c19a6b</div>
+                        <div class="swatch-rgb">rgb(193, 154, 107)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#7a9b76">
+                    <div class="swatch-color" style="background: #7a9b76;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Sage</div>
+                        <div class="swatch-code">#7a9b76</div>
+                        <div class="swatch-rgb">rgb(122, 155, 118)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#9b8b7e">
+                    <div class="swatch-color" style="background: #9b8b7e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Taupe</div>
+                        <div class="swatch-code">#9b8b7e</div>
+                        <div class="swatch-rgb">rgb(155, 139, 126)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#556b2f">
+                    <div class="swatch-color" style="background: #556b2f;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Olive</div>
+                        <div class="swatch-code">#556b2f</div>
+                        <div class="swatch-rgb">rgb(85, 107, 47)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#8b4513">
+                    <div class="swatch-color" style="background: #8b4513;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Saddle</div>
+                        <div class="swatch-code">#8b4513</div>
+                        <div class="swatch-rgb">rgb(139, 69, 19)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#d2b48c">
+                    <div class="swatch-color" style="background: #d2b48c;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Tan</div>
+                        <div class="swatch-code">#d2b48c</div>
+                        <div class="swatch-rgb">rgb(210, 180, 140)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-tags">
+                <span class="usage-tag">オーガニック</span>
+                <span class="usage-tag">ナチュラル</span>
+                <span class="usage-tag">カフェ</span>
+                <span class="usage-tag">アウトドア</span>
+                <span class="usage-tag">エコ</span>
+            </div>
+        </div>
+
+        <!-- パステルカラー -->
+        <div class="color-family-section">
+            <div class="family-header">
+                <div class="family-icon" style="background: linear-gradient(135deg, #ffd1dc, #e0b0ff);">
+                    🌸
+                </div>
+                <div class="family-info">
+                    <h2>パステルカラー</h2>
+                    <p>やわらかく優しい印象の淡い色調 - キュート・フェミニン系に最適</p>
+                </div>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch-card" data-color="#ffd1dc">
+                    <div class="swatch-color" style="background: #ffd1dc;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Pink</div>
+                        <div class="swatch-code">#ffd1dc</div>
+                        <div class="swatch-rgb">rgb(255, 209, 220)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#e0b0ff">
+                    <div class="swatch-color" style="background: #e0b0ff;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Mauve</div>
+                        <div class="swatch-code">#e0b0ff</div>
+                        <div class="swatch-rgb">rgb(224, 176, 255)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#b0e0e6">
+                    <div class="swatch-color" style="background: #b0e0e6;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Powder Blue</div>
+                        <div class="swatch-code">#b0e0e6</div>
+                        <div class="swatch-rgb">rgb(176, 224, 230)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#c5e7d0">
+                    <div class="swatch-color" style="background: #c5e7d0;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Mint</div>
+                        <div class="swatch-code">#c5e7d0</div>
+                        <div class="swatch-rgb">rgb(197, 231, 208)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#fffacd">
+                    <div class="swatch-color" style="background: #fffacd;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Lemon</div>
+                        <div class="swatch-code">#fffacd</div>
+                        <div class="swatch-rgb">rgb(255, 250, 205)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#ffe4e1">
+                    <div class="swatch-color" style="background: #ffe4e1;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Misty Rose</div>
+                        <div class="swatch-code">#ffe4e1</div>
+                        <div class="swatch-rgb">rgb(255, 228, 225)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#e6e6fa">
+                    <div class="swatch-color" style="background: #e6e6fa;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Lavender</div>
+                        <div class="swatch-code">#e6e6fa</div>
+                        <div class="swatch-rgb">rgb(230, 230, 250)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#ffdab9">
+                    <div class="swatch-color" style="background: #ffdab9;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Peach</div>
+                        <div class="swatch-code">#ffdab9</div>
+                        <div class="swatch-rgb">rgb(255, 218, 185)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-tags">
+                <span class="usage-tag">キュート</span>
+                <span class="usage-tag">フェミニン</span>
+                <span class="usage-tag">ベビー</span>
+                <span class="usage-tag">スイーツ</span>
+                <span class="usage-tag">優しい</span>
+            </div>
+        </div>
+
+        <!-- モダンカラー -->
+        <div class="color-family-section">
+            <div class="family-header">
+                <div class="family-icon" style="background: linear-gradient(135deg, #2d3436, #00b894);">
+                    ⚡
+                </div>
+                <div class="family-info">
+                    <h2>モダンカラー</h2>
+                    <p>洗練された都会的な色調 - スタイリッシュ・ミニマル系に最適</p>
+                </div>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch-card" data-color="#2d3436">
+                    <div class="swatch-color" style="background: #2d3436;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Charcoal</div>
+                        <div class="swatch-code">#2d3436</div>
+                        <div class="swatch-rgb">rgb(45, 52, 54)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#00b894">
+                    <div class="swatch-color" style="background: #00b894;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Aqua</div>
+                        <div class="swatch-code">#00b894</div>
+                        <div class="swatch-rgb">rgb(0, 184, 148)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#6c5ce7">
+                    <div class="swatch-color" style="background: #6c5ce7;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Amethyst</div>
+                        <div class="swatch-code">#6c5ce7</div>
+                        <div class="swatch-rgb">rgb(108, 92, 231)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#fdcb6e">
+                    <div class="swatch-color" style="background: #fdcb6e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Mustard</div>
+                        <div class="swatch-code">#fdcb6e</div>
+                        <div class="swatch-rgb">rgb(253, 203, 110)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#fd79a8">
+                    <div class="swatch-color" style="background: #fd79a8;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Carnation</div>
+                        <div class="swatch-code">#fd79a8</div>
+                        <div class="swatch-rgb">rgb(253, 121, 168)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#636e72">
+                    <div class="swatch-color" style="background: #636e72;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Granite</div>
+                        <div class="swatch-code">#636e72</div>
+                        <div class="swatch-rgb">rgb(99, 110, 114)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#0984e3">
+                    <div class="swatch-color" style="background: #0984e3;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Electron</div>
+                        <div class="swatch-code">#0984e3</div>
+                        <div class="swatch-rgb">rgb(9, 132, 227)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#e17055">
+                    <div class="swatch-color" style="background: #e17055;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Terracotta</div>
+                        <div class="swatch-code">#e17055</div>
+                        <div class="swatch-rgb">rgb(225, 112, 85)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-tags">
+                <span class="usage-tag">モダン</span>
+                <span class="usage-tag">ミニマル</span>
+                <span class="usage-tag">スタイリッシュ</span>
+                <span class="usage-tag">都会的</span>
+                <span class="usage-tag">洗練</span>
+            </div>
+        </div>
+
+        <!-- ヴィヴィッドカラー -->
+        <div class="color-family-section">
+            <div class="family-header">
+                <div class="family-icon" style="background: linear-gradient(135deg, #ff006e, #fb5607);">
+                    ⚡
+                </div>
+                <div class="family-info">
+                    <h2>ヴィヴィッドカラー</h2>
+                    <p>鮮やかで目を引く強い色調 - インパクト・エナジー系に最適</p>
+                </div>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch-card" data-color="#ff006e">
+                    <div class="swatch-color" style="background: #ff006e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Magenta</div>
+                        <div class="swatch-code">#ff006e</div>
+                        <div class="swatch-rgb">rgb(255, 0, 110)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#fb5607">
+                    <div class="swatch-color" style="background: #fb5607;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Tangerine</div>
+                        <div class="swatch-code">#fb5607</div>
+                        <div class="swatch-rgb">rgb(251, 86, 7)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#ffbe0b">
+                    <div class="swatch-color" style="background: #ffbe0b;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Sunshine</div>
+                        <div class="swatch-code">#ffbe0b</div>
+                        <div class="swatch-rgb">rgb(255, 190, 11)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#3a86ff">
+                    <div class="swatch-color" style="background: #3a86ff;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Azure</div>
+                        <div class="swatch-code">#3a86ff</div>
+                        <div class="swatch-rgb">rgb(58, 134, 255)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#8338ec">
+                    <div class="swatch-color" style="background: #8338ec;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Violet</div>
+                        <div class="swatch-code">#8338ec</div>
+                        <div class="swatch-rgb">rgb(131, 56, 236)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#06ffa5">
+                    <div class="swatch-color" style="background: #06ffa5;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Neon Green</div>
+                        <div class="swatch-code">#06ffa5</div>
+                        <div class="swatch-rgb">rgb(6, 255, 165)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#ff3366">
+                    <div class="swatch-color" style="background: #ff3366;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Hot Pink</div>
+                        <div class="swatch-code">#ff3366</div>
+                        <div class="swatch-rgb">rgb(255, 51, 102)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#00d9ff">
+                    <div class="swatch-color" style="background: #00d9ff;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Cyan</div>
+                        <div class="swatch-code">#00d9ff</div>
+                        <div class="swatch-rgb">rgb(0, 217, 255)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-tags">
+                <span class="usage-tag">インパクト</span>
+                <span class="usage-tag">エナジー</span>
+                <span class="usage-tag">ポップ</span>
+                <span class="usage-tag">若者向け</span>
+                <span class="usage-tag">目立つ</span>
+            </div>
+        </div>
+
+        <!-- ダークトーン -->
+        <div class="color-family-section">
+            <div class="family-header">
+                <div class="family-icon" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                    🌙
+                </div>
+                <div class="family-info">
+                    <h2>ダークトーン</h2>
+                    <p>重厚感のある暗めの色調 - 高級感・ミステリアス系に最適</p>
+                </div>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch-card" data-color="#1a1a2e">
+                    <div class="swatch-color" style="background: #1a1a2e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Midnight</div>
+                        <div class="swatch-code">#1a1a2e</div>
+                        <div class="swatch-rgb">rgb(26, 26, 46)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#16213e">
+                    <div class="swatch-color" style="background: #16213e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Navy</div>
+                        <div class="swatch-code">#16213e</div>
+                        <div class="swatch-rgb">rgb(22, 33, 62)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#0f3460">
+                    <div class="swatch-color" style="background: #0f3460;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Deep Blue</div>
+                        <div class="swatch-code">#0f3460</div>
+                        <div class="swatch-rgb">rgb(15, 52, 96)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#533483">
+                    <div class="swatch-color" style="background: #533483;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Plum</div>
+                        <div class="swatch-code">#533483</div>
+                        <div class="swatch-rgb">rgb(83, 52, 131)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#2c3e50">
+                    <div class="swatch-color" style="background: #2c3e50;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Wet Asphalt</div>
+                        <div class="swatch-code">#2c3e50</div>
+                        <div class="swatch-rgb">rgb(44, 62, 80)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#34495e">
+                    <div class="swatch-color" style="background: #34495e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Slate Gray</div>
+                        <div class="swatch-code">#34495e</div>
+                        <div class="swatch-rgb">rgb(52, 73, 94)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#1e272e">
+                    <div class="swatch-color" style="background: #1e272e;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Black Pearl</div>
+                        <div class="swatch-code">#1e272e</div>
+                        <div class="swatch-rgb">rgb(30, 39, 46)</div>
+                    </div>
+                </div>
+                <div class="color-swatch-card" data-color="#2f3640">
+                    <div class="swatch-color" style="background: #2f3640;"></div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Graphite</div>
+                        <div class="swatch-code">#2f3640</div>
+                        <div class="swatch-rgb">rgb(47, 54, 64)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-tags">
+                <span class="usage-tag">高級感</span>
+                <span class="usage-tag">ミステリアス</span>
+                <span class="usage-tag">重厚</span>
+                <span class="usage-tag">ダークモード</span>
+                <span class="usage-tag">ラグジュアリー</span>
             </div>
         </div>
 

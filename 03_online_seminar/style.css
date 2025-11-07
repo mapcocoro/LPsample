@@ -8,8 +8,9 @@
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     color: #333;
-    line-height: 1.7;
+    line-height: 1.5;
     background: #fff;
+    font-size: 14px;
 }
 
 .container {
@@ -31,21 +32,21 @@ body {
 .header-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 12px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: #2563eb;
 }
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 18px;
     align-items: center;
 }
 
@@ -63,8 +64,9 @@ body {
 .nav-cta {
     background: #2563eb;
     color: #fff !important;
-    padding: 10px 24px;
-    border-radius: 6px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 13px;
 }
 
 .nav-cta:hover {
@@ -73,7 +75,7 @@ body {
 
 /* ヒーロー */
 .hero {
-    padding: 140px 40px 80px;
+    padding: 75px 25px 45px;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
@@ -87,47 +89,47 @@ body {
     display: inline-block;
     background: #2563eb;
     color: #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .hero-title {
-    font-size: 52px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
     color: #1e293b;
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 14px;
     color: #64748b;
-    margin-bottom: 50px;
-    line-height: 1.8;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .hero-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
+    gap: 18px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
 .info-item {
     background: #fff;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 15px;
+    border-radius: 8px;
     display: flex;
-    gap: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    gap: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .info-icon {
-    font-size: 32px;
+    font-size: 22px;
 }
 
 .info-content {
@@ -143,26 +145,26 @@ body {
 }
 
 .info-value {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     color: #1e293b;
 }
 
 .hero-cta {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .btn-primary {
     display: inline-block;
     background: #2563eb;
     color: #fff;
-    padding: 18px 50px;
-    border-radius: 8px;
+    padding: 11px 30px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
 }
 
 .btn-primary:hover {
@@ -200,14 +202,14 @@ body {
 
 /* セクション共通 */
 section {
-    padding: 80px 40px;
+    padding: 45px 25px;
 }
 
 .section-title {
     text-align: center;
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 35px;
     color: #1e293b;
 }
 
@@ -218,15 +220,15 @@ section {
 
 .target-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 18px;
 }
 
 .target-card {
     text-align: center;
-    padding: 40px 30px;
+    padding: 24px 18px;
     background: #f8fafc;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.3s;
 }
 
@@ -236,20 +238,20 @@ section {
 }
 
 .target-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 12px;
 }
 
 .target-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 15px;
+    margin-bottom: 10px;
     color: #1e293b;
 }
 
 .target-card p {
     color: #64748b;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 /* カリキュラム */
@@ -263,38 +265,38 @@ section {
 }
 
 .day-section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .day-header {
     background: #2563eb;
     color: #fff;
-    padding: 25px 30px;
-    border-radius: 12px 12px 0 0;
+    padding: 15px 18px;
+    border-radius: 8px 8px 0 0;
 }
 
 .day-number {
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     opacity: 0.9;
 }
 
 .day-title {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 .curriculum-list {
     background: #fff;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 8px 8px;
     overflow: hidden;
 }
 
 .curriculum-item {
     display: flex;
-    gap: 30px;
-    padding: 30px;
+    gap: 18px;
+    padding: 18px;
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -303,15 +305,15 @@ section {
 }
 
 .time {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: #2563eb;
     white-space: nowrap;
 }
 
 .curriculum-content h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
     color: #1e293b;
 }
 
@@ -321,10 +323,11 @@ section {
 }
 
 .curriculum-content li {
-    padding: 8px 0;
-    padding-left: 20px;
+    padding: 5px 0;
+    padding-left: 15px;
     position: relative;
     color: #64748b;
+    font-size: 13px;
 }
 
 .curriculum-content li::before {
@@ -342,23 +345,23 @@ section {
 
 .instructor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
 .instructor-card {
     text-align: center;
-    padding: 40px;
+    padding: 24px;
     background: #f8fafc;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .instructor-photo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(135deg, #cbd5e1, #94a3b8);
     border-radius: 50%;
-    margin: 0 auto 25px;
+    margin: 0 auto 15px;
     position: relative;
 }
 
@@ -373,22 +376,24 @@ section {
 }
 
 .instructor-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
     color: #1e293b;
 }
 
 .instructor-title {
     color: #2563eb;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    font-size: 13px;
 }
 
 .instructor-card p {
     color: #64748b;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    line-height: 1.6;
+    margin-bottom: 12px;
     text-align: left;
+    font-size: 13px;
 }
 
 .instructor-credentials {
@@ -414,27 +419,28 @@ section {
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
 }
 
 .testimonial-card {
     background: #fff;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 .rating {
     color: #fbbf24;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
 .testimonial-text {
     color: #475569;
-    line-height: 1.8;
-    margin-bottom: 25px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 13px;
 }
 
 .testimonial-author {
@@ -460,32 +466,32 @@ section {
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 18px;
 }
 
 .benefit-card {
     text-align: center;
-    padding: 40px 25px;
+    padding: 24px 15px;
     background: #f0f9ff;
-    border-radius: 12px;
-    border: 2px solid #bfdbfe;
+    border-radius: 8px;
+    border: 1.5px solid #bfdbfe;
 }
 
 .benefit-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 12px;
 }
 
 .benefit-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
     color: #1e293b;
 }
 
 .benefit-card p {
     color: #64748b;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* 申込 */
@@ -501,23 +507,23 @@ section {
 
 .apply-container h2 {
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 60px;
+    font-size: 24px;
+    margin-bottom: 35px;
     color: #fff;
 }
 
 .apply-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    gap: 35px;
 }
 
 .price-box {
     background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 12px;
+    padding: 24px;
+    border-radius: 8px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .price-label {
@@ -527,18 +533,18 @@ section {
 }
 
 .price-amount {
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .price-note {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.7;
 }
 
 .apply-details h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .apply-details ul {
@@ -570,29 +576,30 @@ section {
 
 .apply-form {
     background: #fff;
-    padding: 40px;
-    border-radius: 12px;
+    padding: 24px;
+    border-radius: 8px;
     color: #333;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 600;
     color: #1e293b;
+    font-size: 13px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 15px;
+    padding: 8px 12px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 13px;
     transition: border-color 0.3s;
 }
 
@@ -604,12 +611,12 @@ section {
 
 .submit-button {
     width: 100%;
-    padding: 16px;
+    padding: 10px;
     background: #2563eb;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
@@ -639,44 +646,45 @@ section {
 
 .faq-item {
     background: #fff;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
     font-weight: 600;
     color: #1e293b;
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
 .faq-answer {
     color: #64748b;
-    line-height: 1.8;
+    line-height: 1.6;
+    font-size: 13px;
 }
 
 /* フッター */
 .footer {
     background: #1e293b;
     color: #94a3b8;
-    padding: 50px 40px 30px;
+    padding: 30px 25px 18px;
     text-align: center;
 }
 
 .footer-logo {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 18px;
+    margin-bottom: 18px;
 }
 
 .footer-links a {
@@ -696,12 +704,21 @@ section {
 
 /* レスポンシブ */
 @media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px 30px;
+    }
+
     .hero-title {
-        font-size: 36px;
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 20px;
     }
 
     .hero-info {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .instructor-grid {
@@ -710,16 +727,25 @@ section {
 
     .apply-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 24px;
     }
 
     .footer-links {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .curriculum-item {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        padding: 9px 24px;
+        font-size: 13px;
     }
 }
