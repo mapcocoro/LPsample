@@ -31,6 +31,11 @@
             font-weight: 600;
         }
 
+        .header h1 .company-name {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
         .header p {
             font-size: 14px;
             opacity: 0.9;
@@ -103,6 +108,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
+            grid-auto-rows: 1fr;
         }
 
         .lp-link {
@@ -218,7 +224,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>🎨 ココロＡＩ合同会社 LPサンプル集</h1>
+        <h1>🎨 <span class="company-name">ココロＡＩ合同会社</span> LPサンプル集</h1>
         <p>LP（ランディングページ）作成の受注用に、様々なイベント・業種を想定した7種類のサンプルLPを作成しました。</p>
     </div>
 
