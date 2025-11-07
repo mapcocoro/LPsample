@@ -182,6 +182,116 @@
             }
         }
 
+        /* カラーコンビネーション */
+        .combination-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .combination-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .combination-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .combination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .combination-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .combination-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .combination-header {
+            margin-bottom: 20px;
+        }
+
+        .combination-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .combination-desc {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .combination-colors {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .combination-color {
+            flex: 1;
+            height: 80px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .combination-color:hover {
+            transform: scale(1.05);
+        }
+
+        .combination-color-code {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .combination-color:hover .combination-color-code {
+            opacity: 1;
+        }
+
+        .combination-usage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .combination-tag {
+            padding: 5px 12px;
+            background: white;
+            color: #667eea;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
         .footer {
             text-align: center;
             padding: 40px;
@@ -681,6 +791,215 @@
                 <span class="usage-tag">ミニマルデザイン</span>
             </div>
         </div>
+
+        <!-- おすすめ配色パターン -->
+        <div class="combination-section">
+            <h2 class="combination-title">おすすめ配色パターン</h2>
+            <p class="combination-subtitle">業種やイメージに合わせた4〜5色の組み合わせ例</p>
+
+            <div class="combination-grid">
+                <!-- ビジネス・プロフェッショナル -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">ビジネス・プロフェッショナル</div>
+                        <div class="combination-desc">信頼感と安定感を演出する青系中心の配色</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #1e40af;" onclick="copyColor('#1e40af')">
+                            <div class="combination-color-code">#1e40af</div>
+                        </div>
+                        <div class="combination-color" style="background: #3b82f6;" onclick="copyColor('#3b82f6')">
+                            <div class="combination-color-code">#3b82f6</div>
+                        </div>
+                        <div class="combination-color" style="background: #64748b;" onclick="copyColor('#64748b')">
+                            <div class="combination-color-code">#64748b</div>
+                        </div>
+                        <div class="combination-color" style="background: #e2e8f0;" onclick="copyColor('#e2e8f0')">
+                            <div class="combination-color-code">#e2e8f0</div>
+                        </div>
+                        <div class="combination-color" style="background: #f8fafc; border: 1px solid #ddd;" onclick="copyColor('#f8fafc')">
+                            <div class="combination-color-code">#f8fafc</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">コーポレート</span>
+                        <span class="combination-tag">金融</span>
+                        <span class="combination-tag">IT企業</span>
+                    </div>
+                </div>
+
+                <!-- エネルギッシュ・情熱的 -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">エネルギッシュ・情熱的</div>
+                        <div class="combination-desc">活気と熱意を表現する赤・オレンジ系の配色</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #dc2626;" onclick="copyColor('#dc2626')">
+                            <div class="combination-color-code">#dc2626</div>
+                        </div>
+                        <div class="combination-color" style="background: #f97316;" onclick="copyColor('#f97316')">
+                            <div class="combination-color-code">#f97316</div>
+                        </div>
+                        <div class="combination-color" style="background: #fbbf24;" onclick="copyColor('#fbbf24')">
+                            <div class="combination-color-code">#fbbf24</div>
+                        </div>
+                        <div class="combination-color" style="background: #fecaca;" onclick="copyColor('#fecaca')">
+                            <div class="combination-color-code">#fecaca</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">スポーツ</span>
+                        <span class="combination-tag">イベント</span>
+                        <span class="combination-tag">飲食</span>
+                    </div>
+                </div>
+
+                <!-- ナチュラル・エコ -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">ナチュラル・エコ</div>
+                        <div class="combination-desc">自然や健康を感じさせる緑系の配色</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #166534;" onclick="copyColor('#166534')">
+                            <div class="combination-color-code">#166534</div>
+                        </div>
+                        <div class="combination-color" style="background: #22c55e;" onclick="copyColor('#22c55e')">
+                            <div class="combination-color-code">#22c55e</div>
+                        </div>
+                        <div class="combination-color" style="background: #86efac;" onclick="copyColor('#86efac')">
+                            <div class="combination-color-code">#86efac</div>
+                        </div>
+                        <div class="combination-color" style="background: #dcfce7;" onclick="copyColor('#dcfce7')">
+                            <div class="combination-color-code">#dcfce7</div>
+                        </div>
+                        <div class="combination-color" style="background: #854d0e;" onclick="copyColor('#854d0e')">
+                            <div class="combination-color-code">#854d0e</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">オーガニック</span>
+                        <span class="combination-tag">環境</span>
+                        <span class="combination-tag">健康</span>
+                    </div>
+                </div>
+
+                <!-- 高級感・エレガント -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">高級感・エレガント</div>
+                        <div class="combination-desc">洗練された雰囲気を演出する紫・グレー系</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #6b21a8;" onclick="copyColor('#6b21a8')">
+                            <div class="combination-color-code">#6b21a8</div>
+                        </div>
+                        <div class="combination-color" style="background: #a855f7;" onclick="copyColor('#a855f7')">
+                            <div class="combination-color-code">#a855f7</div>
+                        </div>
+                        <div class="combination-color" style="background: #1e293b;" onclick="copyColor('#1e293b')">
+                            <div class="combination-color-code">#1e293b</div>
+                        </div>
+                        <div class="combination-color" style="background: #e9d5ff;" onclick="copyColor('#e9d5ff')">
+                            <div class="combination-color-code">#e9d5ff</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">ラグジュアリー</span>
+                        <span class="combination-tag">美容</span>
+                        <span class="combination-tag">ファッション</span>
+                    </div>
+                </div>
+
+                <!-- 明るい・フレンドリー -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">明るい・フレンドリー</div>
+                        <div class="combination-desc">親しみやすく楽しい雰囲気の黄・オレンジ系</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #f59e0b;" onclick="copyColor('#f59e0b')">
+                            <div class="combination-color-code">#f59e0b</div>
+                        </div>
+                        <div class="combination-color" style="background: #fbbf24;" onclick="copyColor('#fbbf24')">
+                            <div class="combination-color-code">#fbbf24</div>
+                        </div>
+                        <div class="combination-color" style="background: #fb923c;" onclick="copyColor('#fb923c')">
+                            <div class="combination-color-code">#fb923c</div>
+                        </div>
+                        <div class="combination-color" style="background: #fef3c7;" onclick="copyColor('#fef3c7')">
+                            <div class="combination-color-code">#fef3c7</div>
+                        </div>
+                        <div class="combination-color" style="background: #fff7ed; border: 1px solid #ddd;" onclick="copyColor('#fff7ed')">
+                            <div class="combination-color-code">#fff7ed</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">子供向け</span>
+                        <span class="combination-tag">カジュアル</span>
+                        <span class="combination-tag">教育</span>
+                    </div>
+                </div>
+
+                <!-- 落ち着いた・信頼 -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">落ち着いた・信頼</div>
+                        <div class="combination-desc">安定感と信頼性を重視した青・グレー系</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #0c4a6e;" onclick="copyColor('#0c4a6e')">
+                            <div class="combination-color-code">#0c4a6e</div>
+                        </div>
+                        <div class="combination-color" style="background: #0ea5e9;" onclick="copyColor('#0ea5e9')">
+                            <div class="combination-color-code">#0ea5e9</div>
+                        </div>
+                        <div class="combination-color" style="background: #475569;" onclick="copyColor('#475569')">
+                            <div class="combination-color-code">#475569</div>
+                        </div>
+                        <div class="combination-color" style="background: #94a3b8;" onclick="copyColor('#94a3b8')">
+                            <div class="combination-color-code">#94a3b8</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">医療</span>
+                        <span class="combination-tag">法律</span>
+                        <span class="combination-tag">教育</span>
+                    </div>
+                </div>
+
+                <!-- クリエイティブ・モダン -->
+                <div class="combination-card">
+                    <div class="combination-header">
+                        <div class="combination-name">クリエイティブ・モダン</div>
+                        <div class="combination-desc">革新的で遊び心のある多彩な配色</div>
+                    </div>
+                    <div class="combination-colors">
+                        <div class="combination-color" style="background: #a855f7;" onclick="copyColor('#a855f7')">
+                            <div class="combination-color-code">#a855f7</div>
+                        </div>
+                        <div class="combination-color" style="background: #3b82f6;" onclick="copyColor('#3b82f6')">
+                            <div class="combination-color-code">#3b82f6</div>
+                        </div>
+                        <div class="combination-color" style="background: #22c55e;" onclick="copyColor('#22c55e')">
+                            <div class="combination-color-code">#22c55e</div>
+                        </div>
+                        <div class="combination-color" style="background: #f59e0b;" onclick="copyColor('#f59e0b')">
+                            <div class="combination-color-code">#f59e0b</div>
+                        </div>
+                        <div class="combination-color" style="background: #ec4899;" onclick="copyColor('#ec4899')">
+                            <div class="combination-color-code">#ec4899</div>
+                        </div>
+                    </div>
+                    <div class="combination-usage">
+                        <span class="combination-tag">デザイン</span>
+                        <span class="combination-tag">スタートアップ</span>
+                        <span class="combination-tag">エンタメ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="copy-notification" id="notification">
@@ -710,6 +1029,17 @@
                 });
             });
         });
+
+        // 配色パターンのカラーをコピー
+        function copyColor(color) {
+            navigator.clipboard.writeText(color).then(() => {
+                const notification = document.getElementById('notification');
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
