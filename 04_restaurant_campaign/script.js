@@ -12,13 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 予約フォーム送信
-document.querySelector('.reservation-form form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('ご予約ありがとうございます！\n確認メールをお送りいたしますので、ご確認ください。\n（デモ版）');
-    e.target.reset();
-});
-
 // スクロールアニメーション
 const observerOptions = {
     threshold: 0.15,
@@ -41,10 +34,3 @@ document.querySelectorAll('.concept-card, .course-item, .review-card').forEach(e
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
     observer.observe(el);
 });
-
-// 今日の日付以降のみ選択可能にする
-const dateInput = document.querySelector('input[type="date"]');
-if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-}

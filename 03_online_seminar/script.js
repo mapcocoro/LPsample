@@ -12,14 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// フォーム送信
-document.querySelector('.apply-form form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    alert('お申し込みありがとうございます！\n確認メールをお送りしますので、ご確認ください。\n（デモ版）');
-    e.target.reset();
-});
-
 // スクロールアニメーション
 const observerOptions = {
     threshold: 0.1,

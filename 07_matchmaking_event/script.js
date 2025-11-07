@@ -12,13 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 予約フォーム送信
-document.querySelector('.reserve-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('ご予約ありがとうございます！\n確認メールをお送りいたしますので、ご確認ください。\n素敵な出会いをお楽しみに！\n（デモ版）');
-    e.target.reset();
-});
-
 // スクロールアニメーション
 const observerOptions = {
     threshold: 0.15,

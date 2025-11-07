@@ -12,13 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// エントリーフォーム送信
-document.querySelector('.application-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('エントリーありがとうございます！\n担当者より3営業日以内にご連絡させていただきます。\n（デモ版）');
-    e.target.reset();
-});
-
 // スクロールアニメーション
 const observerOptions = {
     threshold: 0.15,
