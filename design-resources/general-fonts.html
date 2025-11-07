@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一般フォント一覧 - LPデザインリソース</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@400;500;700;900&family=Montserrat:wght@300;400;500;600;700;900&family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 30px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-5px);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .font-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .font-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .font-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .font-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .font-category {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .font-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .font-tag {
+            padding: 4px 10px;
+            background: #e2e8f0;
+            color: #4a5568;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .font-sample {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .sample-text {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .font-weights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .weight-sample {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .weight-label {
+            font-size: 0.75rem;
+            color: #718096;
+            margin-bottom: 5px;
+        }
+
+        .pairing-section {
+            margin-top: 50px;
+        }
+
+        .pairing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .pairing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .pairing-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .pairing-fonts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .pairing-font {
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 12px;
+        }
+
+        .pairing-label {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .pairing-example {
+            margin-top: 25px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #48bb78;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .font-grid,
+            .pairing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .font-weights {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← デザインリソース一覧に戻る</a>
+
+        <div class="header">
+            <h1>一般フォント一覧</h1>
+            <p>Webデザインで使える人気のフォント集 - クリックでフォント名をコピー</p>
+        </div>
+
+        <div id="notification" class="notification">フォント名をコピーしました！</div>
+
+        <!-- 日本語フォント -->
+        <div class="section">
+            <h2 class="section-title">日本語フォント</h2>
+            <div class="font-grid">
+                <!-- Noto Sans JP -->
+                <div class="font-card" onclick="copyFontName('Noto Sans JP')">
+                    <div class="font-name">Noto Sans JP</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">モダン</span>
+                        <span class="font-tag">読みやすい</span>
+                        <span class="font-tag">ビジネス</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Noto Sans JP', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            美しい日本語タイポグラフィ
+                        </div>
+                        <div class="sample-text" style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem;">
+                            Googleが開発した高品質な日本語フォント。あらゆる用途に適した万能フォントです。
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-weight: 300;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-weight: 900;">サンプル</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noto Serif JP -->
+                <div class="font-card" onclick="copyFontName('Noto Serif JP')">
+                    <div class="font-name">Noto Serif JP</div>
+                    <div class="font-category">Serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">上品</span>
+                        <span class="font-tag">伝統的</span>
+                        <span class="font-tag">高級感</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Noto Serif JP', serif; font-size: 1.5rem; font-weight: 700;">
+                            格調高い明朝体デザイン
+                        </div>
+                        <div class="sample-text" style="font-family: 'Noto Serif JP', serif; font-size: 1rem;">
+                            明朝体の美しさを現代的に表現。高級感のあるデザインに最適です。
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Noto Serif JP', serif; font-weight: 400;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Noto Serif JP', serif; font-weight: 500;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Noto Serif JP', serif; font-weight: 700;">サンプル</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M PLUS Rounded 1c -->
+                <div class="font-card" onclick="copyFontName('M PLUS Rounded 1c')">
+                    <div class="font-name">M PLUS Rounded 1c</div>
+                    <div class="font-category">Rounded</div>
+                    <div class="font-tags">
+                        <span class="font-tag">やわらかい</span>
+                        <span class="font-tag">親しみやすい</span>
+                        <span class="font-tag">カジュアル</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            丸ゴシックの温かみ
+                        </div>
+                        <div class="sample-text" style="font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1rem;">
+                            角を丸めた優しいデザイン。子供向けやカジュアルなサイトに最適です。
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 300;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 400;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 900;">サンプル</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zen Kaku Gothic New -->
+                <div class="font-card" onclick="copyFontName('Zen Kaku Gothic New')">
+                    <div class="font-name">Zen Kaku Gothic New</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">スタイリッシュ</span>
+                        <span class="font-tag">モダン</span>
+                        <span class="font-tag">汎用的</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            シャープな角ゴシック
+                        </div>
+                        <div class="sample-text" style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 1rem;">
+                            現代的で読みやすい角ゴシック体。Webサイト全般に使いやすいフォントです。
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 400;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700;">サンプル</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900;">サンプル</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 英語フォント - Sans-serif -->
+        <div class="section">
+            <h2 class="section-title">英語フォント - Sans-serif</h2>
+            <div class="font-grid">
+                <!-- Poppins -->
+                <div class="font-card" onclick="copyFontName('Poppins')">
+                    <div class="font-name">Poppins</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Modern</span>
+                        <span class="font-tag">Geometric</span>
+                        <span class="font-tag">Friendly</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Modern & Clean Typography
+                        </div>
+                        <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-size: 1rem;">
+                            A geometric sans-serif with a friendly, approachable feel. Perfect for modern web designs.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">SemiBold (600)</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-weight: 600;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Montserrat -->
+                <div class="font-card" onclick="copyFontName('Montserrat')">
+                    <div class="font-name">Montserrat</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Urban</span>
+                        <span class="font-tag">Professional</span>
+                        <span class="font-tag">Versatile</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Urban & Professional Design
+                        </div>
+                        <div class="sample-text" style="font-family: 'Montserrat', sans-serif; font-size: 1rem;">
+                            Inspired by urban typography, perfect for headlines and body text alike.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">SemiBold (600)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 600;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roboto -->
+                <div class="font-card" onclick="copyFontName('Roboto')">
+                    <div class="font-name">Roboto</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Google</span>
+                        <span class="font-tag">Neutral</span>
+                        <span class="font-tag">Readable</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Google's Material Design Font
+                        </div>
+                        <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-size: 1rem;">
+                            The default font for Android and Material Design. Highly readable and neutral.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Roboto', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Roboto', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Roboto', sans-serif; font-weight: 500;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Roboto', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Sans -->
+                <div class="font-card" onclick="copyFontName('Open Sans')">
+                    <div class="font-name">Open Sans</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Neutral</span>
+                        <span class="font-tag">Friendly</span>
+                        <span class="font-tag">Accessible</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Open Sans', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Optimized for Web & Print
+                        </div>
+                        <div class="sample-text" style="font-family: 'Open Sans', sans-serif; font-size: 1rem;">
+                            One of the most popular web fonts. Clean, readable, and works everywhere.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Open Sans', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Open Sans', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">SemiBold (600)</div>
+                            <div style="font-family: 'Open Sans', sans-serif; font-weight: 600;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Open Sans', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lato -->
+                <div class="font-card" onclick="copyFontName('Lato')">
+                    <div class="font-name">Lato</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Warm</span>
+                        <span class="font-tag">Stable</span>
+                        <span class="font-tag">Corporate</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Lato', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Warm & Stable Typography
+                        </div>
+                        <div class="sample-text" style="font-family: 'Lato', sans-serif; font-size: 1rem;">
+                            Semi-rounded details give Lato a feeling of warmth while maintaining stability.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 900;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raleway -->
+                <div class="font-card" onclick="copyFontName('Raleway')">
+                    <div class="font-name">Raleway</div>
+                    <div class="font-category">Sans-serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Elegant</span>
+                        <span class="font-tag">Thin</span>
+                        <span class="font-tag">Stylish</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Raleway', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            Elegant & Stylish Design
+                        </div>
+                        <div class="sample-text" style="font-family: 'Raleway', sans-serif; font-size: 1rem;">
+                            An elegant sans-serif typeface family. Great for headings and display text.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Raleway', sans-serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Raleway', sans-serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">SemiBold (600)</div>
+                            <div style="font-family: 'Raleway', sans-serif; font-weight: 600;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Raleway', sans-serif; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 英語フォント - Serif -->
+        <div class="section">
+            <h2 class="section-title">英語フォント - Serif</h2>
+            <div class="font-grid">
+                <!-- Playfair Display -->
+                <div class="font-card" onclick="copyFontName('Playfair Display')">
+                    <div class="font-name">Playfair Display</div>
+                    <div class="font-category">Serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Elegant</span>
+                        <span class="font-tag">Luxury</span>
+                        <span class="font-tag">Display</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;">
+                            Luxury & Elegance
+                        </div>
+                        <div class="sample-text" style="font-family: 'Playfair Display', serif; font-size: 1rem;">
+                            A high-contrast serif font perfect for titles and headlines in luxury brands.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Playfair Display', serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Playfair Display', serif; font-weight: 500;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Playfair Display', serif; font-weight: 700;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'Playfair Display', serif; font-weight: 900;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Merriweather -->
+                <div class="font-card" onclick="copyFontName('Merriweather')">
+                    <div class="font-name">Merriweather</div>
+                    <div class="font-category">Serif</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Readable</span>
+                        <span class="font-tag">Editorial</span>
+                        <span class="font-tag">Traditional</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 700;">
+                            Perfect for Long Reading
+                        </div>
+                        <div class="sample-text" style="font-family: 'Merriweather', serif; font-size: 1rem;">
+                            Designed to be pleasant to read on screens. Ideal for articles and blogs.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Merriweather', serif; font-weight: 300;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Merriweather', serif; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Merriweather', serif; font-weight: 700;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Black (900)</div>
+                            <div style="font-family: 'Merriweather', serif; font-weight: 900;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 英語フォント - Display & Monospace -->
+        <div class="section">
+            <h2 class="section-title">英語フォント - Display & Monospace</h2>
+            <div class="font-grid">
+                <!-- Oswald -->
+                <div class="font-card" onclick="copyFontName('Oswald')">
+                    <div class="font-name">Oswald</div>
+                    <div class="font-category">Display</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Bold</span>
+                        <span class="font-tag">Condensed</span>
+                        <span class="font-tag">Impact</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                            BOLD & IMPACTFUL HEADLINES
+                        </div>
+                        <div class="sample-text" style="font-family: 'Oswald', sans-serif; font-size: 1rem;">
+                            A condensed sans-serif perfect for headlines and attention-grabbing text.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Light (300)</div>
+                            <div style="font-family: 'Oswald', sans-serif; font-weight: 300;">SAMPLE</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Oswald', sans-serif; font-weight: 400;">SAMPLE</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">SemiBold (600)</div>
+                            <div style="font-family: 'Oswald', sans-serif; font-weight: 600;">SAMPLE</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Oswald', sans-serif; font-weight: 700;">SAMPLE</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Source Code Pro -->
+                <div class="font-card" onclick="copyFontName('Source Code Pro')">
+                    <div class="font-name">Source Code Pro</div>
+                    <div class="font-category">Monospace</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Code</span>
+                        <span class="font-tag">Technical</span>
+                        <span class="font-tag">Adobe</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'Source Code Pro', monospace; font-size: 1.3rem; font-weight: 700;">
+                            const code = "beautiful";
+                        </div>
+                        <div class="sample-text" style="font-family: 'Source Code Pro', monospace; font-size: 0.95rem;">
+                            A monospace font family for coding. Designed by Adobe for clarity.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Source Code Pro', monospace; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Source Code Pro', monospace; font-weight: 500;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Source Code Pro', monospace; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IBM Plex Mono -->
+                <div class="font-card" onclick="copyFontName('IBM Plex Mono')">
+                    <div class="font-name">IBM Plex Mono</div>
+                    <div class="font-category">Monospace</div>
+                    <div class="font-tags">
+                        <span class="font-tag">Modern</span>
+                        <span class="font-tag">Technical</span>
+                        <span class="font-tag">IBM</span>
+                    </div>
+                    <div class="font-sample">
+                        <div class="sample-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 1.3rem; font-weight: 700;">
+                            function design() { }
+                        </div>
+                        <div class="sample-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.95rem;">
+                            IBM's typeface for coding. Perfect for technical documentation.
+                        </div>
+                    </div>
+                    <div class="font-weights">
+                        <div class="weight-sample">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 400;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500;">Sample</div>
+                        </div>
+                        <div class="weight-sample">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 700;">Sample</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- フォントペアリング提案 -->
+        <div class="pairing-section">
+            <h2 class="section-title">おすすめフォントペアリング</h2>
+            <div class="pairing-grid">
+                <!-- ペアリング1 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">モダン & プロフェッショナル</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 700;">
+                                Montserrat Bold
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Open Sans', sans-serif; font-size: 1rem;">
+                                Open Sans Regular - Perfect combination for professional websites and corporate designs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; margin-bottom: 10px;">Modern Business Solutions</h3>
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 1rem; line-height: 1.6;">
+                            This pairing creates a clean, professional look that works great for business websites, portfolios, and modern applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ペアリング2 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">エレガント & 高級感</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700;">
+                                Playfair Display
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Lato', sans-serif; font-size: 1rem;">
+                                Lato Regular - Elegant serif paired with clean sans-serif for luxury brands.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; margin-bottom: 10px;">Luxury & Sophistication</h3>
+                        <p style="font-family: 'Lato', sans-serif; font-size: 1rem; line-height: 1.6;">
+                            Perfect for fashion, lifestyle, and premium product websites. The contrast creates visual interest while maintaining elegance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ペアリング3 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">親しみやすい & カジュアル</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 700;">
+                                Poppins Bold
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Roboto', sans-serif; font-size: 1rem;">
+                                Roboto Regular - Friendly geometric paired with neutral sans-serif.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; margin-bottom: 10px;">Friendly & Approachable</h3>
+                        <p style="font-family: 'Roboto', sans-serif; font-size: 1rem; line-height: 1.6;">
+                            Great for startups, tech products, and creative agencies. Creates a modern, friendly atmosphere.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ペアリング4 - 日本語 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">日本語 - モダン</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 1.8rem; font-weight: 900;">
+                                Zen Kaku Gothic New
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem;">
+                                Noto Sans JP - 現代的な角ゴシックと読みやすいゴシック体の組み合わせ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 1.5rem; margin-bottom: 10px;">モダンな日本語デザイン</h3>
+                        <p style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; line-height: 1.8;">
+                            ビジネスサイトやコーポレートサイトに最適。シャープな見出しと読みやすい本文の組み合わせで、プロフェッショナルな印象を与えます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ペアリング5 - 日本語 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">日本語 - やわらかい</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.8rem; font-weight: 900;">
+                                M PLUS Rounded 1c
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem;">
+                                Noto Sans JP - 丸ゴシックの温かみと読みやすさの両立
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 900; font-size: 1.5rem; margin-bottom: 10px;">親しみやすいデザイン</h3>
+                        <p style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; line-height: 1.8;">
+                            子供向けサイトやカジュアルなサービスに最適。丸みを帯びた見出しが親しみやすさを演出し、本文は読みやすさを重視しています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ペアリング6 - 日本語 -->
+                <div class="pairing-card">
+                    <div class="pairing-title">日本語 - 上品</div>
+                    <div class="pairing-fonts">
+                        <div class="pairing-font">
+                            <div class="pairing-label">見出し</div>
+                            <div style="font-family: 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 700;">
+                                Noto Serif JP
+                            </div>
+                        </div>
+                        <div class="pairing-font">
+                            <div class="pairing-label">本文</div>
+                            <div style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem;">
+                                Noto Sans JP - 明朝体の高級感とゴシック体の読みやすさ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pairing-example">
+                        <h3 style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 1.5rem; margin-bottom: 10px;">格調高いデザイン</h3>
+                        <p style="font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; line-height: 1.8;">
+                            高級ブランドや伝統的なサービスに最適。明朝体の見出しが品格を演出し、ゴシック体の本文で可読性を確保します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyFontName(fontName) {
+            navigator.clipboard.writeText(fontName).then(() => {
+                const notification = document.getElementById('notification');
+                notification.textContent = `"${fontName}" をコピーしました！`;
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('コピーに失敗しました:', err);
+            });
+        }
+    </script>
+</body>
+</html>
