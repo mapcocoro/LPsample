@@ -90,7 +90,7 @@ body {
 .hero-description {
     margin-bottom: 24px;
     color: #888;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .hero-description p {
@@ -182,7 +182,7 @@ body {
 }
 
 .features-header h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     color: #000;
 }
@@ -234,7 +234,7 @@ body {
 }
 
 .showcase-text h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 18px;
     line-height: 1.2;
@@ -244,7 +244,7 @@ body {
     color: #666;
     margin-bottom: 12px;
     line-height: 1.6;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .showcase-visual {
@@ -278,7 +278,7 @@ body {
 
 .specs-title {
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 45px;
 }
@@ -317,7 +317,7 @@ body {
 
 .gallery-title {
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 45px;
 }
@@ -366,7 +366,7 @@ body {
 }
 
 .buy-container h2 {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 35px;
 }
