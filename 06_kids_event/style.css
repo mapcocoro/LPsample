@@ -79,7 +79,7 @@ body {
 
 /* ヒーロー */
 .hero {
-    padding: 18px 12px 80px;
+    padding: 80px 12px 80px;
     background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #ff7675 100%);
     position: relative;
     overflow: hidden;

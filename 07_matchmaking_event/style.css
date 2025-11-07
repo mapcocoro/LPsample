@@ -88,7 +88,7 @@ body {
     background: linear-gradient(135deg, rgba(212, 131, 139, 0.08) 0%, rgba(233, 180, 188, 0.08) 100%),
                 url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&h=900&fit=crop') center/cover;
     position: relative;
-    padding: 45px 20px 100px;
+    padding: 80px 20px 100px;
 }
 
 .hero-overlay {
